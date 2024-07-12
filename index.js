@@ -1,6 +1,7 @@
 const taskInput = document.getElementById("taskInput");
 const taskList = document.getElementById("taskList");
 
+//comment code//
 //Function
 function addTask() {
   const taskText = taskInput.value.trim();
