@@ -14,8 +14,8 @@ class YesNoApp(QMainWindow):
         self.setCentralWidget(central_widget)
 
         # Tạo các nút "Có" và "Không"
-        yes_button = QPushButton('Có', self)
-        no_button = QPushButton('Không', self)
+        yes_button = QPushButton('Bắt đầu game', self)
+        no_button = QPushButton('Thoát game', self)
 
         # Kết nối các lần nhấp vào nút với các phương thức
         yes_button.clicked.connect(self.show_yes_message)

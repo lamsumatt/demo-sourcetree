@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu đồ hình tròn</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="myPieChart" width="400" height="400"></canvas>
+    <script>
+        var ctx = document.getElementById('myPieChart').getContext('2d');
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Điểm 5', 'Điểm 6', 'Điểm 7', 'Điểm 8', 'Điểm 9', 'Điểm 10', 'Điểm khác'],
+                datasets: [{
+                    data: [20, 10, 25, 35, 15, 10, 9],
+                    backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'pink', 'violet']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Phân bố điểm số môn học DV'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
